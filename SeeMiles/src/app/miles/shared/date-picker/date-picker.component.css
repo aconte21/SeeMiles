@@ -1,0 +1,14 @@
+.form-control{
+    width: auto;
+    border-color: lightblue;
+    margin-right: 1px;
+}
+.form-group{
+    margin-top: 5px;
+    height: 42px;
+}
+.sort-button{
+    background-color: lightgreen;
+    width: auto;
+    margin-left: 3px;
+}

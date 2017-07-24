@@ -1,0 +1,32 @@
+.row{
+    margin: auto; 
+}
+.well{
+    border: none;
+}
+.well div {
+    color: #5d85d5;
+    font-size: 20px;
+}
+
+.pad-left {
+    margin-left: 10px;
+}
+
+.shadow{
+    box-shadow: 3px 3px 4px lightblue;
+}
+
+
+
+
+
+.bold { font-weight: bold; }
+.green {color: #3ec94e !important; }
+.yellow {color: #ed961c !important; }
+.red {color: #ff4c4c !important; }
+
+.progress-bar-success{
+    background: lightgreen;
+}
+

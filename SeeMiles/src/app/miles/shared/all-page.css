@@ -1,0 +1,19 @@
+h1{
+    color: #f4f5f7;
+    margin-top: 60px;
+    margin-left: 15px;
+}
+div{
+    color: #f4f5f7;
+}
+.btn{
+    margin-left: 15px;
+}
+
+.fixed-attachment{
+    width: stretch;
+    position: fixed;
+    z-index: 999;
+    background-color: #5d85d5;
+    max-height: 164px;
+}

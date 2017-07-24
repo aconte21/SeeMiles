@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+.hoverwell:hover {
+    border-color: #5d85d5;
+    background-color: #c2d1f0;
+    cursor: pointer;
+}
+body{
+    background-color: #5d85d5;
+}

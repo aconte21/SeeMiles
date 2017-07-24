@@ -1,0 +1,16 @@
+<div>   
+    <div class="fixed-attachment">
+        <h1 id = "milesTitle">Your Miles</h1>
+        <date-picker (sortMiles)="sortMilesByDate($event)"></date-picker>
+    </div>
+    
+    <div id="div1" class="container-fluid" style="min-height: 170px;"></div>
+
+    <div class="container-fluid">
+      <div class="row">
+          <div *ngFor="let mile of miles" class="col-lg-4 col-sm-6">
+              <miles-thumbnail [mile] = "mile"></miles-thumbnail>
+          </div>
+      </div>
+    </div>
+</div>

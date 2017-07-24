@@ -1,0 +1,14 @@
+<div class="well hoverwell thumbnail shadow">
+    <div>
+        Miles Traveled: <span  [ngClass]='getMileSeverityClass()'>{{mile.miles}}</span>
+    </div>
+    <div>Date: {{mile.date}} </div>
+    <div>Route: {{mile.route}}</div>
+
+    <div>Miles Reimbursable</div>
+    <div class="progress">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{'width' : mile.miles + '%'}">
+  </div>
+</div>
+    <!-- <div>ID: {{mile.id}}</div> -->
+</div>

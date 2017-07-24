@@ -1,0 +1,30 @@
+
+  <h1>Settings</h1>
+  <hr />
+  <div class="col-md-4">
+  <form #mileForm="ngForm" (ngSubmit)="createNewMile(mileForm.value)" autocomplete="off">
+    <div class="form-group" >
+      <div class="container-fluid">
+        <label for="miles">Distance from Home to Office:</label>
+        <input (ngModel)="miles" name="miles" required id="miles" 
+                type="text" class="form-control" placeholder="Miles to office..." />
+      </div>
+    </div>
+
+    <div class="form-group" >
+      <div class="container-fluid">
+        <label for="route">Amount Reimbursed per mile</label>
+        
+          <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+          </div>
+      </div>
+    </div>
+
+    <span (mouseenter)="mouseoverLogin=true" (mouseleave)="mouseoverLogin=false">
+      <button type="submit" class="btn btn-primary">Update</button>
+    </span>
+    <button type="button" (click)="back()" class="btn btn-default">Cancel</button>
+  </form>
+</div>
