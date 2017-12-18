@@ -1,0 +1,48 @@
+
+  <h1>Edit Mile</h1>
+  <hr />
+  <div class="col-md-4">
+  <form #detailsForm="ngForm" (ngSubmit)="updateMile(detailsForm.value)" autocomplete="off">
+    <div class="form-group" >
+      <div class="container-fluid">
+        <label for="miles">Miles:</label>
+        <input (ngModel)="miles" name="miles" required id="miles" 
+                type="text" class="form-control" placeholder="{{mile?.miles}}" />
+      </div>
+    </div>
+
+    <div class="form-group" >
+      <div class="container-fluid">
+        <label for="date">Date:</label>
+        <input (ngModel)="date" name="date" required id="date" 
+                type="text" class="form-control" placeholder="{{mile?.date | date : 'yyyy-MM-d'}}" />
+      </div>
+    </div>
+
+    <div class="form-group" >
+      <div class="container-fluid">
+        <label for="note">Note URL:</label>
+        <input (ngModel)="note" name="note" required id="note" 
+                type="text" class="form-control" placeholder="{{mile?.note}}" />
+      </div>
+    </div>
+
+    <div class="form-group" >
+      <div class="container-fluid">
+        <label for="reimbursed">Reimbursed:</label>
+        <input (ngModel)="reimbursed" name="reimbursed" required id="reimbursed" 
+                type="text" type="checkbox"/>                
+      </div>
+    </div>
+    
+    <span (mouseenter)="mouseoverLogin=true" (mouseleave)="mouseoverLogin=false">
+      <button type="submit" class="btn btn-primary">Update</button>
+    </span>
+
+    <span (mouseenter)="mouseoverLogin=true" (mouseleave)="mouseoverLogin=false">
+      <button type="button" class="btn btn-danger" (click)="deleteMile()">Delete</button>
+    </span>
+
+    <button type="button" (click)="back()" class="btn btn-default">Cancel</button>
+  </form>
+</div>

@@ -2,22 +2,24 @@
   <h1>Settings</h1>
   <hr />
   <div class="col-md-4">
-  <form #mileForm="ngForm" (ngSubmit)="createNewMile(mileForm.value)" autocomplete="off">
+  <form #settingsForm="ngForm" (ngSubmit)="saveSettings(settingsForm.value)" autocomplete="off">
     <div class="form-group" >
       <div class="container-fluid">
-        <label for="miles">Distance from Home to Office:</label>
-        <input (ngModel)="miles" name="miles" required id="miles" 
-                type="text" class="form-control" placeholder="Miles to office..." />
+        <label for="milesToOffice">Distance from Home to Office:</label>
+        <input (ngModel)="milesToOffice" name="milesToOffice" required id="milesToOffice" 
+                type="text" class="form-control" placeholder={{settings?.milesToOffice}} />
       </div>
     </div>
 
     <div class="form-group" >
       <div class="container-fluid">
-        <label for="route">Amount Reimbursed per mile</label>
+        <label for="moneyPerMile">Amount Reimbursed per mile</label>
         
           <div class="input-group">
             <span class="input-group-addon">$</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <input (ngModel)="moneyPerMile" name="moneyPerMile" required id="moneyPerMile" 
+            type="text" class="form-control" 
+            aria-label="Amount (to the nearest dollar)" placeholder={{settings?.moneyPerMile}}>
           </div>
       </div>
     </div>

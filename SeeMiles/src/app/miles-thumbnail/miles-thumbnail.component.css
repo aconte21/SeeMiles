@@ -1,32 +1,48 @@
 .row{
     margin: auto; 
 }
+
 .well{
     border: none;
+    background: #f2f2f2;
+    height: 180px;
+
+    /*-webkit-transition: height 1s;
+    transition: height 1s;  */  
 }
+/*
+.well:hover{
+    height: 380px;
+}
+*/
 .well div {
     color: #5d85d5;
     font-size: 20px;
 }
-
+.well p{
+    font-size: 14px;
+    color: white;
+}
 .pad-left {
     margin-left: 10px;
+    
 }
 
 .shadow{
     box-shadow: 3px 3px 4px lightblue;
 }
 
-
-
-
-
 .bold { font-weight: bold; }
-.green {color: #3ec94e !important; }
-.yellow {color: #ed961c !important; }
-.red {color: #ff4c4c !important; }
+.best {color: #3b2dff !important; }
+.high {color: #3ec94e !important; }
+.mid {color: #ffbb00 !important; }
+.last {color: #C0C0C0 !important;}
 
 .progress-bar-success{
-    background: lightgreen;
+    background: #5d85d5;
+}
+.progress{
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 

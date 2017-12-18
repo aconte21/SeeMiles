@@ -3,14 +3,19 @@
         <h1 id = "milesTitle">Your Miles</h1>
         <date-picker (sortMiles)="sortMilesByDate($event)"></date-picker>
     </div>
-    
-    <div id="div1" class="container-fluid" style="min-height: 170px;"></div>
 
+    <div id="div1" class="container-fluid" style="min-height: 170px;"></div>
+    
     <div class="container-fluid">
       <div class="row">
-          <div *ngFor="let mile of miles" class="col-lg-4 col-sm-6">
-              <miles-thumbnail [mile] = "mile"></miles-thumbnail>
-          </div>
+          <!--<miles-thumbnail class="col-xs-12"></miles-thumbnail>-->
+          <span  *ngIf='showDetails'><mile-details [mile]="mileDetail" [settings]="mileDetailSettings"></mile-details></span>
+           <span *ngIf='!showDetails'>
+              <div *ngFor="let mile of miles" class="col-lg-4 col-sm-6">
+                <miles-thumbnail (getMileDetails)="getMileDetail($event)" [settings]='settings' [mile]="mile"></miles-thumbnail>
+              </div>
+          </span>
       </div>
+      <div class="space-maker"></div>   
     </div>
 </div>

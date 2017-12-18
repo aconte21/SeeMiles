@@ -17,3 +17,8 @@ div{
     background-color: #5d85d5;
     max-height: 164px;
 }
+
+/*Add media query for side phones*/
+.space-maker{
+    height: 248px;
+}

@@ -13,9 +13,17 @@
 
     <div class="form-group" >
       <div class="container-fluid">
-        <label for="route">Route URL:</label>
-        <input (ngModel)="route" name="route" required id="route" 
-                type="text" class="form-control" placeholder="Route URL..." />
+        <label for="date">Date:</label>
+        <input (ngModel)="date" name="date" required id="date" 
+                type="text" class="form-control" placeholder="yyyy-mm-dd" />
+      </div>
+    </div>
+
+    <div class="form-group" >
+      <div class="container-fluid">
+        <label for="note">Note:</label>
+        <input (ngModel)="note" name="note" required id="note" 
+                type="text" class="form-control" placeholder="Note..." />
       </div>
     </div>
 

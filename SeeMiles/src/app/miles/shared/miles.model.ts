@@ -1,5 +1,7 @@
 export interface IMiles {
+    id: number;
     miles: number;
     date: string;
-    route: string;
+    note: string;
+    reimbursed: boolean;
 }
