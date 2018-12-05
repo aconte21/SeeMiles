@@ -8,11 +8,15 @@ export class SettingsService {
   apiBase: string = 'http://localhost:49499/api/';
   constructor(private http:Http) { }
 
-  getUserSettings(id: number): Observable<ISettings>{
-    return this.http.get(this.apiBase + "settings/" + id)
-    .map((response: Response) => {
-      return <ISettings>response.json();
-    }).catch(this.handleError);
+  // getUserSettings(id: number): Observable<ISettings>{
+  //   return this.http.get(this.apiBase + "settings/" + id)
+  //   .map((response: Response) => {
+  //     return <ISettings>response.json();
+  //   }).catch(this.handleError);
+  // }
+
+  getUserSettings(id: number){
+    return USERSETTINGS;
   }
 
   saveUserSettings(settings): Observable<ISettings>{
@@ -33,4 +37,9 @@ export class SettingsService {
   }
   
 
+}
+
+const USERSETTINGS : ISettings = {
+    milesToOffice: 25,
+    moneyPerMile: 0.3
 }

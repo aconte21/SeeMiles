@@ -21,12 +21,15 @@ export class MileDetailsComponent implements OnInit {
   updateMile(formValues){
     if(!formValues.miles) formValues.miles = this.mile.miles
     if(!formValues.date) formValues.date = this.mile.date
-    if(!formValues.route) formValues.route = this.mile.note
-    formValues.id = this.mile.id
-    this._milesService.updateMile(formValues)
-    .subscribe(mile => {
-      this.back();
-    })
+    if(!formValues.note) formValues.note = this.mile.note
+    //formValues.id = this.mile.id
+    // this._milesService.updateMile(formValues)
+    // .subscribe(mile => {
+    //   this.back();
+    // })
+
+    this._milesService.updateMile(formValues);
+    this.back();
   }
   deleteMile(){
     if(confirm("Are you sure you want to delete this mile?")){

@@ -13,10 +13,14 @@ export class CreateMilesComponent implements OnInit {
 
   ngOnInit() {
   }
+  // createNewMile(mile){
+  //   this.milesService.saveMile(mile).subscribe(mile => {
+  //     this.back();
+  //   })
+  // }
   createNewMile(mile){
-    this.milesService.saveMile(mile).subscribe(mile => {
-      this.back();
-    })
+    this.milesService.saveMile(mile)
+    this.back();
   }
   back(){
     this.route.navigate(['miles'])
